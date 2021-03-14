@@ -89,8 +89,11 @@
                                     </TableView>
                                     <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                        <children>
-                                          <Button fx:id="btnRemoveWriter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeWriter" prefHeight="30.0" prefWidth="120.0" text="Remover" />
+                                          <Button fx:id="btnRemoveWriter" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#removeWriter" prefHeight="30.0" prefWidth="120.0" text="Remover" HBox.hgrow="NEVER" />
                                        </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
                                     </HBox>
                                  </children>
                               </AnchorPane>
@@ -178,8 +181,11 @@
                                     </TableView>
                                     <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="30.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                        <children>
-                                          <Button fx:id="btnRemovePublisher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removePublisher" prefHeight="30.0" prefWidth="120.0" text="Remover" />
+                                          <Button fx:id="btnRemovePublisher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#removePublisher" prefHeight="30.0" prefWidth="120.0" text="Remover" HBox.hgrow="NEVER" />
                                        </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
                                     </HBox>
                                  </children>
                               </AnchorPane>
@@ -213,8 +219,8 @@
                                                             <Insets top="10.0" />
                                                          </VBox.margin>
                                                       </Label>
-                                                      <TextField fx:id="txtPublisherCNPJ" maxHeight="-Infinity" minHeight="-Infinity" onAction="#addPublisher" prefHeight="30.0" />
-                                                      <Button fx:id="btnAddPublisher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addPublisher" prefHeight="30.0" prefWidth="120.0" text="Adicionar" VBox.vgrow="NEVER">
+                                                      <TextField fx:id="txtPublisherCNPJ" maxHeight="-Infinity" minHeight="-Infinity" onAction="#addPublisher" prefHeight="30.0" VBox.vgrow="NEVER" />
+                                                      <Button fx:id="btnAddPublisher" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#addPublisher" prefHeight="30.0" prefWidth="120.0" text="Adicionar" VBox.vgrow="NEVER">
                                                          <VBox.margin>
                                                             <Insets top="10.0" />
                                                          </VBox.margin>
