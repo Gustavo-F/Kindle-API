@@ -11,9 +11,24 @@ public class PublisherDAO implements InterfaceDAO<Publisher> {
 	@Override
 	public void persist(Publisher t) {
 		EntityManager em = UtilDB.getEntityManager();
-		em.getTransaction().begin();
-		em.persist(t);
-		em.getTransaction().commit();
+		try {
+			em.getTransaction().begin();
+			em.persist(t);
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+			Publisher original = get(t.getCnpj());
+
+			em.getTransaction().begin();
+
+			original.setName(t.getName());
+			;
+			original.setEmail(t.getEmail());
+			original.setPhone(t.getPhone());
+
+			em.persist(original);
+			em.getTransaction().commit();
+		}
 	}
 
 	@Override
